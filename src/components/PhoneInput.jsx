@@ -1,8 +1,9 @@
 import styles from './PhoneInput.module.css';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { addContact } from '../redux/contactsSlice';
-import { nanoid } from 'nanoid';
+import {
+  addContact,
+} from "../redux/operations";
 
 function PhoneInput() {
   const dispatch = useDispatch();
@@ -20,9 +21,8 @@ function PhoneInput() {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addContact({
-  id: nanoid(),
   name: form.name,
-  number: form.number
+  phone: form.number
 }));
     setForm({ name: '', number: '' });
   };

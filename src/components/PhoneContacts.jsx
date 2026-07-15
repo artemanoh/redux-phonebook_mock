@@ -1,6 +1,6 @@
 import styles from "./PhoneContact.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteContact } from "../redux/contactsSlice";
+import { deleteContact } from "../redux/operations";
 
 function PhoneContacts() {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ function PhoneContacts() {
     <ul className={styles.contactList}>
       {filteredContacts.map(contact => (
         <li className={styles.contactItem} key={contact.id}>
-          {contact.name} : {contact.number}
+          {contact.name} : {contact.phone}
           <button onClick={() => dispatch(deleteContact(contact.id))}>
             Delete
           </button>

@@ -4,10 +4,15 @@ import PhoneContacts from './components/PhoneContacts';
 import PhoneInput from './components/PhoneInput';
 import { nanoid } from 'nanoid';
 import Filter from './components/Filter';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchContacts } from "./redux/operations";
 
 function App() {
-
-
+  const dispatch = useDispatch();
+useEffect(() => {
+  dispatch(fetchContacts());
+}, [dispatch]);
   // handleFilterChange = (event) => {
   //   this.setState({ filter: event.target.value })
   // };
