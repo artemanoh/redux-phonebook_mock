@@ -1,7 +1,7 @@
 {
-  "name": "hm_10",
+  "name": "redux-phonebook_mock",
   "version": "0.1.0",
-  "homepage": "https://artemanoh.github.io/phonebook-redux",
+  "homepage": "https://artemanoh.github.io/redux-phonebook_mock",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.12.0",
